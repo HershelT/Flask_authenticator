@@ -12,3 +12,9 @@ def index():
 @login_required
 def profile():
     return render_template('profile.html', name=current_user.name, age=current_user.age)
+
+@main.route('/cv')
+@login_required
+def cv():
+    return render_template('cv.html', name=current_user.name)
+
